@@ -1,0 +1,46 @@
+
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* .hero-overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 64px;
+  letter-spacing: 6px;
+  font-weight: 500;
+} */
+
+.hero-video-container {
+  width: 100%;
+  height: 90vh;          /* big hero but allows scroll */
+  position: relative;   /* IMPORTANT: not fixed */
+  overflow: hidden;
+}
+
+.hero-video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.hero-title {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 42px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  background: rgba(0,0,0,0.2);
+}
+

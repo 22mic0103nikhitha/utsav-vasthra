@@ -1,0 +1,115 @@
+.how-it-works {
+  background: #1f2937;
+  color: white;
+  padding: 80px 0;
+}
+
+.how-it-works h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.subtitle {
+  text-align: center;
+  color: #d1d5db;
+  margin-bottom: 50px;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  position: relative;
+}
+
+.step {
+  text-align: center;
+}
+
+.step-icon {
+  font-size: 48px;
+  color: #8fae9e; /* sage green */
+  margin-bottom: 20px;
+}
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.step h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.step p {
+  font-size: 14px;
+  color: #e5e7eb;
+}
+
+.step-number {
+  margin-top: 20px;
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #d4b36a; /* soft gold */
+  color: #fff;
+  line-height: 34px;
+  font-size: 14px;
+}
+
+/* subtle hover elegance */
+.step:hover .step-icon {
+  color: #6f9785;
+  transform: translateY(-4px);
+  transition: 0.3s ease;
+}
+
+.how-wrapper {
+  background: #2b2f3a; /* deep elegant navy */
+  padding: 90px 0;
+}
+
+.how-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Individual step */
+.how-item h3 {
+  font-family: "Georgia", serif;
+  font-size: 18px;
+  margin-bottom: 14px;
+  letter-spacing: 0.5px;
+}
+
+.how-item p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #d1d5db;
+}
+
+/* Last row centered */
+.how-container .how-item:nth-child(4),
+.how-container .how-item:nth-child(5) {
+  grid-column: span 3;
+  max-width: 420px;
+  margin: auto;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .how-container {
+    grid-template-columns: 1fr;
+  }
+
+  .how-container .how-item {
+    grid-column: span 1;
+  }
+}

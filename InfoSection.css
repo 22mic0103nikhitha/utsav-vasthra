@@ -1,0 +1,30 @@
+.info-section {
+  background-image: url("./assets/bg.jpg"); /* ✅ your fabric image */
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+}
+
+.info-overlay {
+  background: rgba(255, 255, 255, 0.85);
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 50px;
+}
+
+.info-content p {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 14px;
+  color: #111;
+}
+
+.info-content strong {
+  font-weight: 600;
+}
+
+.info-note {
+  margin-top: 25px;
+  font-size: 13px;
+  color: #555;
+}

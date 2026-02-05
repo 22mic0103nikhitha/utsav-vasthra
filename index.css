@@ -1,0 +1,310 @@
+/* ===============================
+   GLOBAL RESET + VARIABLES
+================================ */
+
+:root {
+  --emerald: #0f766e;
+  --emerald-dark: #064e3b;
+  --sage: #9ca3af;
+  --muted: #6b7280;
+  --bg: #f9fafb;
+  --max-content: 1150px;
+
+  font-family: "Inter", system-ui, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: #111827;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Root must allow scroll */
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+/* ===============================
+   CONTAINER
+================================ */
+
+.container {
+  max-width: var(--max-content);
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===============================
+   NAVBAR
+================================ */
+
+.header {
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand img {
+  height: 70px;
+  object-fit: contain;
+}
+
+.brand-title {
+  font-family: "Georgia", serif;
+  font-size: 24px;
+  margin: 0;
+}
+
+.brand-tag {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+/* ===============================
+   HERO VIDEO SECTION
+================================ */
+
+.hero-video-container {
+  width: 100%;
+  height: 90vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Georgia", serif;
+  font-size: 48px;
+  letter-spacing: 3px;
+  color: white;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/* ===============================
+   SECTIONS
+================================ */
+
+.section {
+  padding: 80px 0;
+  background: white;
+}
+
+.section.alt {
+  background: #f3f4f6;
+}
+
+.section-title {
+  font-family: "Georgia", serif;
+  font-size: 32px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.section-sub {
+  color: var(--muted);
+  margin-bottom: 40px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* ===============================
+   STEPS (HOW IT WORKS)
+================================ */
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.step-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-6px);
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background: var(--emerald);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  font-weight: 600;
+}
+
+.step-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.step-desc {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* ===============================
+   CARDS / COLLECTIONS
+================================ */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card-img {
+  height: 220px;
+  background: #f3f4f6;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 14px;
+}
+
+.card-title {
+  font-weight: 600;
+}
+
+.card-meta {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.card-footer {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+
+.btn {
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: var(--emerald);
+  color: white;
+}
+
+.btn-outline {
+  border: 1px solid var(--emerald);
+  color: var(--emerald);
+  background: white;
+}
+
+/* ===============================
+   MODAL
+================================ */
+
+.modal-back {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal {
+  background: white;
+  width: 95%;
+  max-width: 450px;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+input {
+  padding: 8px 10px;
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* ===============================
+   FOOTER SPACING (FOR SCROLL)
+================================ */
+
+.page-bottom-space {
+  height: 300px;
+}
