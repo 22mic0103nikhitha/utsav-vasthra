@@ -1,4 +1,4 @@
-# Saree Rental Web Application
+# Saree Rental Web Application - UTSAV-VASTHRA
 
 ## 📌 Project Overview
 This is a **web development application** designed for **renting sarees for grand events** such as weddings, receptions, and festivals.  
